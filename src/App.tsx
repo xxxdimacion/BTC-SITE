@@ -30,19 +30,8 @@ export default function App() {
       {/* Main Content Area */}
       <div className="relative z-10 flex-grow flex flex-col justify-between min-h-screen">
         
-        {/* Top Navigation */}
-        <div className="w-full relative py-4 sm:py-6 px-4 flex justify-center items-center max-w-7xl mx-auto h-[10vh] border-transparent">
-          <div className="hidden sm:flex space-x-6">
-            {['Блокчейн', 'Трекинг', 'Отчеты'].map((item) => (
-              <span key={item} className="text-sm font-medium text-white/70 hover:text-white cursor-default transition-all">
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
         {/* Hero Section */}
-        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-[80vh] pb-4">
+        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-screen pb-4">
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6 sm:mb-8 drop-shadow-2xl">
             <span className="text-[#D7FF00]">ПОЛУЧИТЬ</span><br />
