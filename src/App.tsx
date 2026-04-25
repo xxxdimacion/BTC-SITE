@@ -31,7 +31,7 @@ export default function App() {
       <div className="relative z-10 flex-grow flex flex-col justify-between min-h-screen">
         
         {/* Hero Section */}
-        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-screen pb-4">
+        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-[120vh] pb-[20vh]">
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6 sm:mb-8 drop-shadow-2xl">
             <span className="text-[#D7FF00]">ПОЛУЧИТЬ</span><br />
