@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { ArrowUpRight, LineChart, ShieldAlert, Key, ChevronRight, X } from 'lucide-react';
+import { ChevronsDown, X } from 'lucide-react';
 
 export default function App() {
   const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | null>(null);
@@ -42,110 +42,37 @@ export default function App() {
         </div>
 
         {/* Hero Section */}
-        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-[75vh] pb-[10vh]">
+        <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-[80vh] pb-4">
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6 sm:mb-8 drop-shadow-2xl">
-            <span className="text-[#D7FF00]">ОНЧЕЙН</span><br />
-            ТРЕКИНГ
+            <span className="text-[#D7FF00]">ПОЛУЧИТЬ</span><br />
+            ГАЙД
           </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl font-medium leading-relaxed px-2">
-            Отслеживаю транзакции скрытых кошельков с крупным капиталом и сливаю их сделки у себя в канале
-          </p>
+
+          <div className="animate-bounce mt-8 mb-4 sm:mt-12 sm:mb-8 flex justify-center">
+            <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-[0_0_15px_rgba(215,255,0,0.15)]">
+              <ChevronsDown className="w-8 h-8 sm:w-10 sm:h-10 text-[#D7FF00]" strokeWidth={2} />
+            </div>
+          </div>
 
           <button
             onClick={triggerAction}
-            className="mt-10 sm:mt-12 w-full sm:w-auto bg-[#D7FF00] text-black font-extrabold text-lg sm:text-2xl uppercase tracking-tight px-6 py-5 sm:px-12 sm:py-6 rounded-full hover:scale-105 active:scale-95 transition-transform flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(215,255,0,0.4)]"
+            className="mt-4 sm:mt-8 w-full sm:w-auto bg-[#D7FF00] text-black font-extrabold text-lg sm:text-2xl uppercase tracking-tight px-6 py-5 sm:px-12 sm:py-6 rounded-full hover:scale-105 active:scale-95 transition-transform flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(215,255,0,0.4)]"
           >
             ПЕРЕЙТИ В TELEGRAM
-            <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 font-bold" strokeWidth={3} />
           </button>
         </main>
 
-        {/* Informational White Section */}
-        <section className="bg-white text-slate-900 rounded-t-[30px] sm:rounded-t-[60px] pt-12 sm:pt-24 pb-12 px-4 sm:px-8 mt-auto relative z-20 w-full flex-shrink-0 border-t-8 border-[#D7FF00]">
+        {/* Footer Section */}
+        <section className="bg-white text-slate-900 rounded-t-[20px] sm:rounded-t-[40px] py-4 sm:py-6 px-4 sm:px-8 mt-auto relative z-20 w-full flex-shrink-0 border-t-8 border-[#D7FF00]">
           <div className="max-w-7xl mx-auto">
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-16">
-              
-              {/* Card 1 */}
-              <div 
-                onClick={triggerAction}
-                className="bg-slate-50 border border-slate-100 p-5 sm:p-8 rounded-[24px] sm:rounded-[30px] flex sm:flex-col items-center sm:text-center hover:bg-slate-100 transition-colors gap-4 sm:gap-0 text-left cursor-pointer sm:cursor-default shadow-sm group"
-              >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-[#0A26C4]/10 rounded-2xl flex items-center justify-center sm:mb-6 group-hover:scale-110 transition-transform">
-                  <Key className="w-7 h-7 sm:w-8 sm:h-8 text-[#0A26C4]" />
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-lg sm:text-2xl font-black uppercase tracking-tight mb-1 sm:mb-2 text-slate-900">Мониторинг кошельков</h3>
-                  <p className="text-slate-500 font-medium text-xs sm:text-base leading-relaxed hidden sm:block">
-                    Круглосуточно сканируем публичный блокчейн на предмет подозрительной активности анонимных китов.
-                  </p>
-                </div>
-                <ChevronRight className="w-6 h-6 text-slate-400 sm:hidden flex-shrink-0" />
-                <div className="mt-auto sm:mt-6 hidden sm:flex items-center justify-center bg-[#0A26C4] font-bold text-xs uppercase px-4 py-2 rounded-full cursor-pointer w-fit mx-auto text-white shadow-md shadow-[#0A26C4]/20 transition-transform hover:scale-105">
-                  ТГ-Канал <ChevronRight className="w-4 h-4 ml-1" />
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div 
-                onClick={triggerAction}
-                className="bg-slate-50 border border-slate-100 p-5 sm:p-8 rounded-[24px] sm:rounded-[30px] flex sm:flex-col items-center sm:text-center hover:bg-slate-100 transition-colors gap-4 sm:gap-0 text-left cursor-pointer sm:cursor-default shadow-sm group"
-              >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-[#0A26C4]/10 rounded-2xl flex items-center justify-center sm:mb-6 group-hover:scale-110 transition-transform">
-                  <LineChart className="w-7 h-7 sm:w-8 sm:h-8 text-[#0A26C4]" />
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-lg sm:text-2xl font-black uppercase tracking-tight mb-1 sm:mb-2 text-slate-900">Разбор стратегий</h3>
-                  <p className="text-slate-500 font-medium text-xs sm:text-base leading-relaxed hidden sm:block">
-                    Изучаем логику формирования чужих портфелей. Наблюдайте, как именно крупные игроки управляют капиталом.
-                  </p>
-                </div>
-                <ChevronRight className="w-6 h-6 text-slate-400 sm:hidden flex-shrink-0" />
-                <div className="mt-auto sm:mt-6 hidden sm:flex items-center justify-center bg-[#0A26C4] font-bold text-xs uppercase px-4 py-2 rounded-full cursor-pointer w-fit mx-auto text-white shadow-md shadow-[#0A26C4]/20 transition-transform hover:scale-105">
-                  Подписаться <ChevronRight className="w-4 h-4 ml-1" />
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div 
-                onClick={triggerAction}
-                className="bg-slate-50 border border-slate-100 p-5 sm:p-8 rounded-[24px] sm:rounded-[30px] flex sm:flex-col items-center sm:text-center hover:bg-slate-100 transition-colors gap-4 sm:gap-0 text-left cursor-pointer sm:cursor-default shadow-sm group"
-              >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-[#0A26C4]/10 rounded-2xl flex items-center justify-center sm:mb-6 group-hover:scale-110 transition-transform">
-                  <ShieldAlert className="w-7 h-7 sm:w-8 sm:h-8 text-[#0A26C4]" />
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-lg sm:text-2xl font-black uppercase tracking-tight mb-1 sm:mb-2 text-slate-900">Всё внутри</h3>
-                  <p className="text-slate-500 font-medium text-xs sm:text-base leading-relaxed hidden sm:block">
-                    Отчеты, уведомления о транзакциях и обучающие материалы публикуются исключительно в закрытом канале.
-                  </p>
-                </div>
-                <ChevronRight className="w-6 h-6 text-slate-400 sm:hidden flex-shrink-0" />
-                <div className="mt-auto sm:mt-6 hidden sm:flex items-center justify-center bg-[#0A26C4] font-bold text-xs uppercase px-4 py-2 rounded-full cursor-pointer w-fit mx-auto text-white shadow-md shadow-[#0A26C4]/20 transition-transform hover:scale-105">
-                  Доступ <ChevronRight className="w-4 h-4 ml-1" />
-                </div>
-              </div>
-              
-            </div>
-
-            {/* Mobile bottom CTA */}
-            <div className="sm:hidden mb-10 w-full px-2">
-                <button
-                  onClick={triggerAction}
-                  className="w-full bg-[#D7FF00] text-black font-extrabold text-lg uppercase tracking-tight py-5 rounded-full shadow-[0_0_30px_rgba(215,255,0,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-transform"
-                >
-                  ОТКРЫТЬ КАНАЛ
-                  <ArrowUpRight className="w-6 h-6 font-bold" strokeWidth={3} />
-                </button>
-            </div>
-
             {/* Strict Footer Requirements for Moderation */}
-            <div className="border-t border-slate-200 pt-6 sm:mt-6 pb-2 text-center">
-              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 mb-6">
-                <button onClick={() => setActiveModal('privacy')} className="text-slate-500 hover:text-[#0A26C4] border-b sm:border-none border-slate-100 pb-2 sm:pb-0 font-semibold text-xs sm:text-sm transition-colors text-center w-full sm:w-auto">Политика конфиденциальности</button>
-                <button onClick={() => setActiveModal('terms')} className="text-slate-500 hover:text-[#0A26C4] border-b sm:border-none border-transparent pb-2 sm:pb-0 font-semibold text-xs sm:text-sm transition-colors text-center w-full sm:w-auto mt-2 sm:mt-0">Условия использования</button>
+            <div className="text-center">
+              <div className="flex flex-row flex-wrap justify-center gap-x-4 gap-y-2 mb-3">
+                <button onClick={() => setActiveModal('privacy')} className="text-slate-500 hover:text-[#0A26C4] font-semibold text-xs transition-colors">Политика конфиденциальности</button>
+                <span className="text-slate-300 text-xs hidden sm:inline">|</span>
+                <button onClick={() => setActiveModal('terms')} className="text-slate-500 hover:text-[#0A26C4] font-semibold text-xs transition-colors">Условия использования</button>
               </div>
               <div className="text-slate-400 text-[10px] max-w-3xl mx-auto leading-relaxed mt-4 sm:mt-2">
                 <p className="mb-2">© {new Date().getFullYear()} Onchain Analytics. Данный сайт носит исключительно образовательный характер.</p>
