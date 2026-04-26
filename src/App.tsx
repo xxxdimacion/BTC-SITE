@@ -17,12 +17,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A26C4] font-sans text-white relative overflow-x-hidden flex flex-col">
+    <div className="min-h-screen bg-[#111111] font-sans text-white relative overflow-x-hidden flex flex-col">
       {/* Background Grid Pattern */}
       <div 
-        className="absolute inset-0 z-0 opacity-15 pointer-events-none" 
+        className="absolute inset-0 z-0 opacity-10 pointer-events-none blur-[1px]" 
         style={{ 
-          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)', 
+          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)', 
           backgroundSize: '30px 30px' 
         }}
       ></div>
@@ -34,37 +34,37 @@ export default function App() {
         <main className="flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto flex-grow z-20 min-h-[120vh] pb-[20vh]">
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6 sm:mb-8 drop-shadow-2xl">
-            <span className="text-[#D7FF00]">ПОЛУЧИТЬ</span><br />
+            <span className="text-[#FF0000]">ПОЛУЧИТЬ</span><br />
             ГАЙД
           </h1>
 
           <div className="animate-bounce mt-8 mb-4 sm:mt-12 sm:mb-8 flex justify-center">
-            <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-[0_0_15px_rgba(215,255,0,0.15)]">
-              <ChevronsDown className="w-8 h-8 sm:w-10 sm:h-10 text-[#D7FF00]" strokeWidth={2} />
+            <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-[0_0_15px_rgba(255,0,0,0.15)]">
+              <ChevronsDown className="w-8 h-8 sm:w-10 sm:h-10 text-[#FF0000]" strokeWidth={2} />
             </div>
           </div>
 
           <button
             onClick={triggerAction}
-            className="mt-4 sm:mt-8 w-full sm:w-auto bg-[#D7FF00] text-black font-extrabold text-lg sm:text-2xl uppercase tracking-tight px-6 py-5 sm:px-12 sm:py-6 rounded-full hover:scale-105 active:scale-95 transition-transform flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(215,255,0,0.4)]"
+            className="mt-4 sm:mt-8 w-full sm:w-auto bg-[#FF0000] text-white font-extrabold text-lg sm:text-2xl uppercase tracking-tight px-6 py-5 sm:px-12 sm:py-6 rounded-full hover:scale-105 active:scale-95 transition-transform flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(255,0,0,0.4)]"
           >
             ПЕРЕЙТИ В TELEGRAM
           </button>
         </main>
 
         {/* Footer Section */}
-        <section className="bg-white text-slate-900 rounded-t-[20px] sm:rounded-t-[40px] py-4 sm:py-6 px-4 sm:px-8 mt-auto relative z-20 w-full flex-shrink-0 border-t-8 border-[#D7FF00]">
+        <section className="bg-white text-slate-900 rounded-t-[20px] sm:rounded-t-[40px] py-4 sm:py-6 px-4 sm:px-8 mt-auto relative z-20 w-full flex-shrink-0 border-t-8 border-[#FF0000]">
           <div className="max-w-7xl mx-auto">
             
             {/* Strict Footer Requirements for Moderation */}
             <div className="text-center">
               <div className="flex flex-row flex-wrap justify-center gap-x-4 gap-y-2 mb-3">
-                <button onClick={() => setActiveModal('privacy')} className="text-slate-500 hover:text-[#0A26C4] font-semibold text-xs transition-colors">Политика конфиденциальности</button>
+                <button onClick={() => setActiveModal('privacy')} className="text-slate-500 hover:text-[#555555] font-semibold text-xs transition-colors">Политика конфиденциальности</button>
                 <span className="text-slate-300 text-xs hidden sm:inline">|</span>
-                <button onClick={() => setActiveModal('terms')} className="text-slate-500 hover:text-[#0A26C4] font-semibold text-xs transition-colors">Условия использования</button>
+                <button onClick={() => setActiveModal('terms')} className="text-slate-500 hover:text-[#555555] font-semibold text-xs transition-colors">Условия использования</button>
               </div>
               <div className="text-slate-400 text-[10px] max-w-3xl mx-auto leading-relaxed mt-4 sm:mt-2">
-                <p className="mb-2">© {new Date().getFullYear()} Onchain Analytics. Данный сайт носит исключительно образовательный характер.</p>
+                <p className="mb-2">© {new Date().getFullYear()} Alphaby. Данный сайт носит исключительно образовательный характер.</p>
                 <p className="uppercase tracking-widest opacity-80" style={{ fontSize: '9px' }}>
                   Disclaimer: This site is not a part of the TikTok website or TikTok Inc. 
                   Additionally, this site is NOT endorsed by TikTok in any way. 
